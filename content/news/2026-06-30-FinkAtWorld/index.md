@@ -1,7 +1,7 @@
 ---
 date: "2026-06-30"
 title: "Fink@World"
-cardimage: anomaly.png
+cardimage: finkworldposter.png
 ---
 
 The first [world-wide Fink meeting](https://indico.in2p3.fr/event/38946/) took place at Institut Pascal, Orsay-France, from 8 to 12 June 2026. During 5 days, 35 participants from 3 continents gathered to celebrate our history and plan for the next decade of Rubin observations.  
