@@ -52,7 +52,6 @@ List of publications from the Fink collaboration and the larger astronomy commun
     <b>Anomaly detection in Fink. I. Discovery, follow-up, and classification of unusual sources,</b> <i>M. V. Pruzhinskaya, et al</i>
 </div>
 
-
 <div class="text-with-image">
     <a href="https://arxiv.org/abs/2511.19016" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white" alt="Description of image"></a><a href="https://doi.org/10.1051/0004-6361/202558465" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=AA&color=blue&style=plastic&logo=&logoColor=white" alt="Description of image"></a>
     <b>Lost and Found - A gallery of overlooked optical nuclear transients from the ZTF archive,</b> <i>  Erwan Quintin, Etienne Russeil, Miguel Llamas Lanza, Sergey Karpov, et al</i>
@@ -67,7 +66,6 @@ List of publications from the Fink collaboration and the larger astronomy commun
     <a href="https://arxiv.org/abs/2507.17499" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white" alt="Description of image"></a><a href="https://doi.org/10.1051/0004-6361/202556558" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=AA&color=blue&style=plastic&logo=&logoColor=white" alt="Description of image"></a>
     <b>Early Identification of Optical Tidal Disruption Events: A science module for the Fink broker,</b> <i> Miguel Llamas Lanza, Sergey Karpov, et al</i>
 </div>
-
 
 ### 2025
 
@@ -111,13 +109,13 @@ List of publications from the Fink collaboration and the larger astronomy commun
     <i>B. Carry, J. Peloton, R. Le Montagner, M. Mahlke, J. Berthier</i>
 </div>
 
-### 2023
-
 <div class="text-with-image">
     <a href="https://arxiv.org/abs/2311.04845" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white" alt="Description of image"></a> <a href="https://neurips.cc/virtual/2023/76211" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=neurips&color=blue&style=plastic&logo=&logoColor=white" alt="Description of image"></a>
     <b>Bayesian multi-band fitting of alerts for kilonovae detection</b>,
     <i>Biswajit Biswas, Junpeng Lao, Eric Aubourg, Alexandre Boucaud, Axel Guinot, Emille E. O. Ishida, Cécile Roucelle</i>
 </div>
+
+### 2023
 
 <div class="text-with-image">
     <a href="https://arxiv.org/abs/2310.17322" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white" alt="Description of image"></a> <a href="https://doi.org/10.31577/caosp.2023.53.4.69" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=CAOSP&color=blue&style=plastic&logo=&logoColor=white" alt="Description of image"></a>
@@ -136,12 +134,11 @@ List of publications from the Fink collaboration and the larger astronomy commun
     <b>The Tiny Time-series Transformer: Low-latency High-throughput Classification of Astronomical Transients using Deep Model Compression</b>,
     <i>Tarek Allam Jr., Julien Peloton, Jason D. McEwen</i>
 </div>
-<b>Enabling the discovery of fast transients: A kilonova science module for the Fink broker,</b><i> B. Biswas, E. E. O. Ishida, J. Peloton, A. Moller, M. V. Pruzhinskaya, R. S. de Souza, D. Muthukrishna</i>
-</div>
 
 <div class="text-with-image">
-    <a href="https://arxiv.org/abs/2202.09766" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white" alt="Description of image"></a> <a href="https://doi.org/10.1093/mnras/stac2054" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=mnras&color=blue&style=plastic&logo=&logoColor=white" alt="Description of image"></a> <a href="https://github.com/astrolabsoftware/fink_grandma_kn" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=data&color=orange&style=plastic&logo=&logoColor=white" alt="Description of image"></a>
+    <a href="https://arxiv.org/abs/2210.17433" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white" alt="Description of image"></a> <a href="https://doi.org/10.1051/0004-6361/202245340" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=AA&color=blue&style=plastic&logo=&logoColor=white" alt="Description of image"></a> <b>Enabling the discovery of fast transients: A kilonova science module for the Fink broker,</b><i> B. Biswas, E. E. O. Ishida, J. Peloton, A. Moller, M. V. Pruzhinskaya, R. S. de Souza, D. Muthukrishna</i>
 </div>
+
 
 ### 2022
 
@@ -150,9 +147,9 @@ List of publications from the Fink collaboration and the larger astronomy commun
 </div>
 
 <div class="text-with-image">
-    <a href="https://arxiv.org/abs/2210.17433" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white" alt="Description of image"></a> <a href="https://doi.org/10.1051/0004-6361/202245340" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=AA&color=blue&style=plastic&logo=&logoColor=white" alt="Description of image"></a> 
+    <a href="https://arxiv.org/abs/2202.09766" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white" alt="Description of image"></a> <a href="https://doi.org/10.1093/mnras/stac2054" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=mnras&color=blue&style=plastic&logo=&logoColor=white" alt="Description of image"></a> <a href="https://github.com/astrolabsoftware/fink_grandma_kn" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=data&color=orange&style=plastic&logo=&logoColor=white" alt="Description of image"></a>
     <b>GRANDMA Observations of ZTF/Fink Transients during Summer 2021,</b><i> V. Aivazyan, et al.</i>
-
+</div>
 
 <div class="text-with-image">
     <a href="https://arxiv.org/abs/2202.05719" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white" alt="Description of image"></a>
