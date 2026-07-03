@@ -58,10 +58,6 @@
   }
 }
 
-.card:nth-child(2) {
-  border-radius: 0px;
-}
-
 
 .container-links:hover {
   width: 16em;
