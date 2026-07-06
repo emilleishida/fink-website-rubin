@@ -1,7 +1,7 @@
 ---
 date: "2026-07-08"
 title: "NOMAI: following the signal to superluminous supernovae"
-cardimage: nomai.png
+cardimage: nomai_.png
 ---
 
 Superluminous supernovae (SLSNe) are among the most luminous transients known, yet they remain poorly understood because of their rarity and intrinsic heterogeneity. Efficiently identifying them within the millions of nightly alerts produced by modern time-domain surveys is therefore essential for increasing the number of confirmed events.  
