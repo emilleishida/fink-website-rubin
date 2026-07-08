@@ -24,3 +24,6 @@ main:
 - name: Citing
   url: /cite
   weight: 70
+- name: Status
+  url: https://vdaraka.ijclab.in2p3.fr/public-dashboards/4f6faf056ad8452e9de2586275ba1f5a
+  weight: 80
