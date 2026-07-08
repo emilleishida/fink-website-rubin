@@ -4,8 +4,10 @@ title: "NOMAI: following the signal to superluminous supernovae"
 cardimage: nomai_.png
 ---
 
-Superluminous supernovae (SLSNe) are among the most luminous transients known, yet they remain poorly understood because of their rarity and intrinsic heterogeneity. Efficiently identifying them within the millions of nightly alerts produced by modern time-domain surveys is therefore essential for increasing the number of confirmed events.  
+Superluminous supernovae (SLSNe) are among the most luminous transients known, yet they remain poorly understood because of their rarity and intrinsic heterogeneity.  
 <!--more-->
+
+Efficiently identifying them within the millions of nightly alerts produced by modern time-domain surveys is therefore essential for increasing the number of confirmed events.  
 
 To address this challenge, we developed [NOMAI](https://arxiv.org/abs/2604.14761), a real-time machine-learning classifier dedicated to the identification of SLSN candidates within the ZTF alert stream. Without requiring a spectroscopic redshift, the classifier extracts physically motivated features from the light curves using the [Rainbow](https://fink-broker.org/news/2025-06-10-rainbow/) and [SALT2](https://www.aanda.org/component/article?access=bibcode&bibcode=&bibcode=2007A%2526A...466...11GFUL) models before classifying each incoming alert with an [XGBoost algorithm](https://medium.com/low-code-for-advanced-data-science/xgboost-explained-a-beginners-guide-095464ad418f).  
 
