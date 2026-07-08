@@ -16,7 +16,7 @@ Trained on a curated set of labeled ZTF transients, including more than 200 SLSN
 NOMAI is easily usable through the Fink ZTF science portal via the “SLSN candidate” class. During its first two months of operation, it recovered **22 of the 24** SLSNe publicly reported on the [Transient Name Server](https://www.wis-tns.org/), demonstrating its ability to efficiently identify promising candidates in real-time.  
 
 
-<img src="images/slsn.png" align="center" width="70%" height="700%" style="display: block; margin: auto;" />
+<img src="images/slsn.jpg" align="center" width="70%" height="700%" style="display: block; margin: auto;" />
 
 The next objective for NOMAI is its adaptation to the Vera C. Rubin Observatory Legacy Survey of Space and Time (LSST), where automated photometric classification will become indispensable. This adaptation is currently underway and will be the subject of future work.  
 
