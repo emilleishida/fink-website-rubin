@@ -1,0 +1,78 @@
+{{ define "main" }}
+  <div class="vi-page">
+    <div class="vi-intro">
+      {{ with .Parent }}
+        <a class="vi-back-link" href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>
+      {{ end }}
+      <h1 class="vi-title">{{ .Title | emojify }}</h1>
+      <div class="vi-intro-text">
+        {{ .Content }}
+      </div>
+    </div>
+
+    {{ $key := .Params.gallery_key }}
+    {{ $items := index site.Data.gallery $key }}
+    {{ $subsections := index site.Data.gallery (printf "%s-subsections" $key) }}
+
+    {{ if $subsections }}
+      {{/* Optional grouping: a section can be split into subsections (see
+           data/gallery/<key>-subsections.yaml), each rendered as its own
+           divider + mosaic. Items opt into a group via their "subsection"
+           field; anything left untagged (or tagged with an unknown name)
+           still shows up, grouped together at the end with no divider, so
+           nothing silently disappears if a piece isn't tagged yet. */}}
+      {{ $groupedNames := slice }}
+      {{ range $subsections }}
+        {{ $groupedNames = $groupedNames | append .name }}
+        <div class="vi-subsection-divider">
+          <span class="vi-subsection-line"></span>
+          <div class="vi-subsection-heading">
+            <h2 class="vi-subsection-title">{{ .name }}</h2>
+            {{ with .description }}
+              <p class="vi-subsection-desc">{{ . }}</p>
+            {{ end }}
+          </div>
+          <span class="vi-subsection-line"></span>
+        </div>
+        {{ $subName := .name }}
+        <div class="vi-grid">
+          {{ range $items }}
+            {{ if eq .subsection $subName }}
+              {{ partial "gallery-item.html" . }}
+            {{ end }}
+          {{ end }}
+        </div>
+      {{ end }}
+      {{ $leftover := where $items "subsection" "not in" $groupedNames }}
+      {{ if $leftover }}
+        <div class="vi-grid">
+          {{ range $leftover }}
+            {{ partial "gallery-item.html" . }}
+          {{ end }}
+        </div>
+      {{ end }}
+    {{ else }}
+      <div class="vi-grid">
+        {{ range $items }}
+          {{ partial "gallery-item.html" . }}
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+
+  <div id="vi-modal" class="vi-modal">
+    <div class="vi-modal-backdrop"></div>
+    <div class="vi-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="vi-modal-title">
+      <button type="button" id="vi-modal-close" class="vi-modal-close" aria-label="Close">&times;</button>
+      <div id="vi-modal-media" class="vi-modal-media">
+        <img id="vi-modal-img" src="" alt="" />
+      </div>
+      <div class="vi-modal-info">
+        <h2 id="vi-modal-title" class="vi-modal-item-title"></h2>
+        <p id="vi-modal-artist" class="vi-modal-item-artist"></p>
+        <p id="vi-modal-desc" class="vi-modal-item-desc"></p>
+        <div id="vi-modal-downloads" class="vi-modal-downloads"></div>
+      </div>
+    </div>
+  </div>
+{{ end }}

@@ -164,3 +164,546 @@
   transform: scale(1.2);
 }
 
+/* ==========================================================
+   Visual Identity gallery
+   ========================================================== */
+
+.vi-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.vi-intro {
+  max-width: 46rem;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+
+.vi-back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #f5622e;
+  text-decoration: none;
+}
+
+.vi-back-link:hover {
+  text-decoration: underline;
+}
+
+.vi-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #334155;
+  margin-bottom: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .vi-title {
+    color: #e2e8f0;
+  }
+}
+
+.vi-intro-text {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #334155;
+  text-align: left;
+}
+
+.vi-intro-text p {
+  margin-bottom: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .vi-intro-text {
+    color: #cbd5e1;
+  }
+}
+
+/* Section picker, shown on the /visual-identity/ landing page.
+   Two rows of 3-then-2 by default, for bigger tiles; 2 per row on
+   narrow/mobile screens. Flexbox (not grid) so a trailing incomplete row
+   centers itself instead of hugging the left edge. */
+.vi-sections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.vi-section-card {
+  display: block;
+  flex: 0 1 calc((100% - 4rem) / 3);
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 600px) {
+  .vi-section-card {
+    flex-basis: calc((100% - 2rem) / 2);
+  }
+}
+
+.vi-section-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 4 / 3;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@media (prefers-color-scheme: dark) {
+  .vi-section-frame {
+    background: #333;
+  }
+}
+
+.vi-section-card:hover .vi-section-frame,
+.vi-section-card:focus-visible .vi-section-frame {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+.vi-section-img {
+  max-width: 92%;
+  max-height: 92%;
+  object-fit: contain;
+}
+
+.vi-section-title {
+  display: block;
+  margin-top: 0.75rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #334155;
+}
+
+@media (prefers-color-scheme: dark) {
+  .vi-section-title {
+    color: #e2e8f0;
+  }
+}
+
+/* Mosaic grid, Pinterest-style via CSS grid (row-major order: left to right,
+   then top to bottom). Each item's grid-row-end span is computed in the
+   template from the thumbnail's own aspect ratio, in 2px auto-rows, with a
+   fixed +8 row (16px) allowance standing in for the row gap. */
+.vi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 2px;
+  grid-auto-flow: row dense;
+  column-gap: 1rem;
+}
+
+@media (max-width: 1100px) {
+  .vi-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .vi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 460px) {
+  .vi-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.vi-item {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+  font: inherit;
+  text-align: left;
+}
+
+/* Landscape images opt into "wide" (see the "wide" field in the gallery data
+   files) to span 2 columns instead of 1, so they render at a reasonable
+   height instead of being squeezed into a single narrow column. On the
+   single-column mobile breakpoint there's nothing to span into, so it's
+   reset back to a normal 1-column item there. */
+.vi-item-wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 460px) {
+  .vi-item-wide {
+    grid-column: span 1;
+  }
+}
+
+/* Optional subsection dividers, splitting a section's mosaic into labelled
+   groups (e.g. Icons: "Science portal icons" / "T-shirt icons"). */
+.vi-subsection-divider {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 46rem;
+  margin: 3rem auto 2rem;
+}
+
+.vi-subsection-line {
+  flex: 1 1 auto;
+  height: 1px;
+  background: rgba(51, 65, 85, 0.25);
+}
+
+@media (prefers-color-scheme: dark) {
+  .vi-subsection-line {
+    background: rgba(226, 232, 240, 0.25);
+  }
+}
+
+.vi-subsection-heading {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.vi-subsection-title {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #334155;
+}
+
+@media (prefers-color-scheme: dark) {
+  .vi-subsection-title {
+    color: #e2e8f0;
+  }
+}
+
+.vi-subsection-desc {
+  margin: 0.35rem 0 0;
+  font-size: 0.95rem;
+  color: #64748b;
+}
+
+@media (prefers-color-scheme: dark) {
+  .vi-subsection-desc {
+    color: #94a3b8;
+  }
+}
+
+.vi-item-frame {
+  display: block;
+  position: relative;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.vi-item:hover .vi-item-frame,
+.vi-item:focus-visible .vi-item-frame {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.vi-item:focus-visible {
+  outline: none;
+}
+
+.vi-item-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (hover: hover) {
+  .vi-item:hover .vi-item-img {
+    transform: scale(1.04);
+  }
+}
+
+.vi-item-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.5rem 0.75rem 0.6rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@media (hover: none) {
+  .vi-item-caption {
+    opacity: 1;
+    transform: none;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  }
+}
+
+.vi-item:hover .vi-item-caption,
+.vi-item:focus-visible .vi-item-caption {
+  opacity: 1;
+  transform: none;
+}
+
+.vi-item-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.vi-item-artist {
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+/* Lightbox modal */
+.vi-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.vi-modal.vi-modal-open {
+  display: flex;
+}
+
+.vi-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.8);
+}
+
+.vi-modal-dialog {
+  position: relative;
+  z-index: 1;
+  background: #f5f5f5;
+  border-radius: 1rem;
+  max-width: 1000px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+@media (prefers-color-scheme: dark) {
+  .vi-modal-dialog {
+    background: #262626;
+  }
+}
+
+@media (min-width: 800px) {
+  .vi-modal-dialog {
+    flex-direction: row;
+    max-height: 80vh;
+  }
+}
+
+.vi-modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  z-index: 2;
+  font-size: 2rem;
+  line-height: 1;
+  background: none;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.vi-modal-media {
+  flex: 1 1 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f172a;
+  min-height: 0;
+}
+
+.vi-modal-media img {
+  display: block;
+  max-width: 100%;
+  max-height: 60vh;
+  object-fit: contain;
+}
+
+@media (min-width: 800px) {
+  .vi-modal-media img {
+    max-height: 80vh;
+  }
+}
+
+.vi-modal-info {
+  flex: 1 1 40%;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.vi-modal-item-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #334155;
+  margin-bottom: 0.25rem;
+}
+
+.vi-modal-item-artist {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f5622e;
+  margin-bottom: 1rem;
+}
+
+.vi-modal-item-artist a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.vi-modal-item-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #334155;
+  margin-bottom: 1.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .vi-modal-item-title,
+  .vi-modal-item-desc {
+    color: #e2e8f0;
+  }
+}
+
+.vi-modal-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.vi-modal-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #fff;
+  background: linear-gradient(to right, #15284f, #f5622e);
+  text-decoration: none;
+}
+
+/* Artists page: static, always-expanded photo + bio rows, alternating sides */
+.vi-artists {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  margin-top: 2.5rem;
+}
+
+.vi-artist {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.vi-artist:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.vi-artist-photo-frame {
+  flex: 0 0 320px;
+  aspect-ratio: 3 / 4;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: #f5f5f5;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  .vi-artist-photo-frame {
+    background: #333;
+  }
+}
+
+.vi-artist-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vi-artist-info {
+  flex: 1 1 auto;
+}
+
+.vi-artist-name {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #334155;
+  margin-bottom: 0.75rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .vi-artist-name {
+    color: #e2e8f0;
+  }
+}
+
+.vi-artist-bio {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #334155;
+}
+
+@media (prefers-color-scheme: dark) {
+  .vi-artist-bio {
+    color: #cbd5e1;
+  }
+}
+
+.vi-artist-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: 700;
+  color: #f5622e;
+  text-decoration: none;
+}
+
+.vi-artist-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .vi-artist,
+  .vi-artist:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .vi-artist-photo-frame {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 320px;
+  }
+}
+

@@ -18,6 +18,9 @@ main:
 - name: Join us
   url: /joining/
   weight: 50
+- name: Visual Identity
+  url: /visual-identity/
+  weight: 55
 - name: About
   url: /about/
   weight: 60

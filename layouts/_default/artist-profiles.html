@@ -1,0 +1,44 @@
+{{ define "main" }}
+  <div class="vi-page">
+    <div class="vi-intro">
+      {{ with .Parent }}
+        <a class="vi-back-link" href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>
+      {{ end }}
+      <h1 class="vi-title">{{ .Title | emojify }}</h1>
+      <div class="vi-intro-text">
+        {{ .Content }}
+      </div>
+    </div>
+
+    {{ $items := index site.Data.gallery .Params.gallery_key }}
+    <div class="vi-artists">
+      {{ range $items }}
+        {{ $img := resources.Get .image }}
+        {{ if $img }}
+          {{ $photo := $img.Filter (images.Process "resize 800x q80 webp") }}
+          <div class="vi-artist">
+            <div class="vi-artist-photo-frame">
+              <img
+                class="vi-artist-photo"
+                src="{{ $photo.RelPermalink }}"
+                width="{{ $photo.Width }}"
+                height="{{ $photo.Height }}"
+                loading="lazy"
+                alt="{{ .title }}"
+              />
+            </div>
+            <div class="vi-artist-info">
+              <h2 class="vi-artist-name">{{ .title }}</h2>
+              {{ with .description }}
+                <p class="vi-artist-bio">{{ . }}</p>
+              {{ end }}
+              {{ with .artist_url }}
+                <a class="vi-artist-link" href="{{ . }}" target="_blank" rel="noopener">Portfolio &nearr;</a>
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+{{ end }}

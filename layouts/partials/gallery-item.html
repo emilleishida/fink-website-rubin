@@ -1,0 +1,52 @@
+{{ $img := resources.Get .image }}
+{{ if $img }}
+  {{ $thumb := $img.Filter (images.Process "resize 700x q75 webp") }}
+  {{ $large := $img.Filter (images.Process "resize 1600x q85 webp") }}
+  {{ $background := .background }}
+  {{ $downloads := .downloads | default (slice) }}
+  {{/* Row-major CSS grid masonry: size each cell (in 2px auto-rows) to
+       the thumbnail's own aspect ratio, plus a fixed gap allowance,
+       so items flow left-to-right / top-to-bottom like a normal grid
+       instead of the column-major order of CSS multi-column.
+
+       "wide" items (see the per-image "wide" field) span 2 grid
+       columns instead of 1, so a landscape image gets roughly double
+       the width to render at - and so its height - instead of being
+       squeezed into a single narrow column. The row-span math below
+       accounts for that doubled width so the taller rendered image
+       still gets a correctly sized cell. */}}
+  {{ $wide := .wide | default false }}
+  {{ $effectiveWidth := 280 }}
+  {{ if $wide }}{{ $effectiveWidth = 576 }}{{ end }}
+  {{ $ratio := div (mul $thumb.Height 1.0) $thumb.Width }}
+  {{ $span := add (math.Ceil (mul $ratio (mul $effectiveWidth 0.5))) 8 }}
+  <button
+    type="button"
+    class="vi-item{{ if $wide }} vi-item-wide{{ end }}"
+    data-title="{{ .title }}"
+    data-artist="{{ .artist }}"
+    data-artist-url="{{ .artist_url }}"
+    data-description="{{ .description }}"
+    data-downloads="{{ $downloads | jsonify }}"
+    data-full="{{ $large.RelPermalink }}"
+    data-background="{{ $background }}"
+    style="grid-row-end: span {{ $span }};"
+  >
+    <span class="vi-item-frame" {{ with $background }}style="background-color: {{ . }};"{{ end }}>
+      <img
+        class="vi-item-img"
+        src="{{ $thumb.RelPermalink }}"
+        width="{{ $thumb.Width }}"
+        height="{{ $thumb.Height }}"
+        loading="lazy"
+        alt="{{ .title }}{{ with .artist }} by {{ . }}{{ end }}"
+      />
+      <span class="vi-item-caption">
+        <span class="vi-item-title">{{ .title }}</span>
+        {{ with .artist }}
+          <span class="vi-item-artist">{{ . }}</span>
+        {{ end }}
+      </span>
+    </span>
+  </button>
+{{ end }}

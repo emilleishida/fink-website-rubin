@@ -1,0 +1,107 @@
+# Visual Identity gallery - Logo section
+#
+# Add one entry per artwork. To add a new piece:
+#   1. Drop a reasonably-sized image (a few MB is fine, it is compressed
+#      automatically) into assets/
+#   2. Add a new block below pointing "image" at that filename.
+#
+# Fields:
+#   image        (required) filename inside assets/
+#   title        (required) short title of the piece
+#   artist       (required) artist name, as they want to be credited
+#   artist_url   (optional) link to the artist's website / socials / portfolio
+#   description  (optional) a sentence or two about the piece
+#   background   (optional) CSS color shown behind the image, for pieces with
+#                a transparent background that shouldn't sit on plain white
+#                or black. Any CSS color works, e.g. "#15284f", "black",
+#                "rgb(20, 20, 40)". Leave empty to use the site's default.
+#   downloads    (optional) list of full-resolution files for this piece, one
+#                button is shown per entry, in the order given, e.g.:
+#                  downloads:
+#                    - format: PNG
+#                      url: https://drive.google.com/...
+#                    - format: Adobe
+#                      url: https://drive.google.com/...
+#                Leave empty/omit if there is nothing to link to yet.
+#   wide         (optional) set to true for landscape/horizontal images that
+#                look too small when constrained to one column's width. A
+#                wide image spans 2 columns instead of 1, so it renders at a
+#                sensible height instead of a tiny sliver. Leave unset
+#                (false) for portrait/square images.
+#   subsection   (optional) groups this item under a titled divider on the
+#                page. Must exactly match a "name" in
+#                data/gallery/branding-subsections.yaml (create that file to
+#                use this). Leave unset to have the item show up in the
+#                ungrouped mosaic at the end.
+
+
+- image: Fink_PrimaryLogo_WEB.png
+  title: "Fink primary logo"
+  artist: "Justin Burks"
+  artist_url: "https://www.justinburksdesign.com/"
+  description: ""
+  background: "#FFFFFF"
+  downloads:
+    - format: PNG
+      url: "https://drive.google.com/file/d/1QI6fRlnqY0EswFt3Ad85b47-cGwmx1PX/view?usp=sharing"
+    - format: Adobe
+      url: "https://drive.google.com/file/d/1aCRY8cN-o988QdvqIAisVUdd2Q9a0AwL/view?usp=sharing"
+
+- image: Fink_SecondaryLogo_WEB.png
+  title: "Fink secondary logo"
+  artist: "Justin Burks"
+  artist_url: "https://www.justinburksdesign.com/"
+  description: ""
+  background: "#FFFFFF"
+  downloads:
+    - format: PNG
+      url: "https://drive.google.com/file/d/1YXzHOICoZx6GDO-5akGhl4tYoPPJhmzM/view?usp=sharing"
+    - format: Adobe
+      url: "https://drive.google.com/file/d/1swZQoMZ5QRAhkfNYbf9Xm5TG_W3LQQvZ/view?usp=sharing"
+
+- image: FinkBrazilGradient.png
+  title: "Fink Brazil logo"
+  artist: "Anastasiya Voloshina"
+  artist_url: "https://www.behance.net/anastasvoloshi2"
+  description: ""
+  background: ""
+  downloads:
+    - format: PNG
+      url: "https://drive.google.com/file/d/1p2m1suJVTr7QL613f_WxiXccu81T1lo2/view?usp=drive_link"
+    - format: Adobe
+      url: "https://drive.google.com/file/d/1mvAWL6eQeJQQpxl-XCKihauSVKror6x0/view?usp=drive_link"
+
+- image: cartoon_fink.png
+  title: "Fink logo stylised"
+  artist: "Anastasiya Voloshina"
+  artist_url: "https://www.behance.net/anastasvoloshi2"
+  description: ""
+  background: "#15284F"
+  downloads:
+    - format: PNG
+      url: "https://drive.google.com/file/d/1820AGfn_WUkNJ_cpHdv6KEByc3y4bH25/view?usp=drive_link"
+    - format: Adobe
+      url: "https://drive.google.com/file/d/1ZuWvyeuv2ruYKFJdPSDrgtt3i76fRhFz/view?usp=drive_link"
+
+- image: ozfink.png
+  title: "OzFink logo"
+  artist: "Anais Möller"
+  artist_url: "https://anaismoller.github.io/"
+  description: ""
+  background: "#15284F"
+
+- image: horizontal_color_chart.png
+  title: "Fink color chart"
+  artist: "Justin Burks"
+  artist_url: "https://www.justinburksdesign.com/"
+  description: ""
+  background: "#FFFFFF"
+  wide: true
+  downloads:
+    - format: PDF
+      url: "https://drive.google.com/file/d/1_v_3pqiAJYmDhWXzTi1e_PtAo3Wuaraz/view?usp=drive_link"
+    - format: Adobe
+      url: "https://drive.google.com/file/d/18b1ICJ00ZkoTJq8W9O2GL4IPo3BVa8o2/view?usp=drive_link"
+
+
+

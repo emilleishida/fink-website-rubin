@@ -1,0 +1,45 @@
+# Visual Identity section picker
+#
+# One entry per section shown on the /visual-identity/ landing page, in the
+# order they should appear. Each entry needs:
+#   slug        (required) matches the folder name under content/visual-identity/
+#               (e.g. "branding" for content/visual-identity/branding/index.md)
+#   cover       (required) filename inside assets/, used as the clickable
+#               cover image for that section. Swap this to whatever image
+#               best represents the section.
+#   background  (optional) CSS color shown behind the cover image, for covers
+#               with a transparent background. Same idea as the "background"
+#               field in the per-section gallery files.
+#   size        (optional) how much to scale up the cover image inside the
+#               button, default 1 (fits the whole image inside with a small
+#               margin). 2 doubles it, cropping whatever no longer fits - use
+#               this to make a cover image fill the whole button, with the
+#               button's own rounded corners clipping it. Decimals are fine,
+#               e.g. 1.4.
+#
+# The section title shown on the page comes from the "title" front matter of
+# that section's content/visual-identity/<slug>/index.md, not from here.
+
+- slug: branding
+  cover: Fink_PrimaryLogo_WEB.png
+  background: "#FFFFFF"
+  size: 1.3
+
+- slug: icons
+  cover: minimalist_logo/SNIa.png
+  background: "#FFFFFF"
+  size: 1.4
+
+- slug: posters
+  cover: finkatworld_button_version.png
+  background: "#FFFFFF"
+  size: 1.22
+
+- slug: goodies
+  cover: fink_bottles.png
+  background: "#FFFFFF"
+
+- slug: artists
+  cover: artist_button_v3.png
+  background: "#FFFFFF"
+  size: 1.15

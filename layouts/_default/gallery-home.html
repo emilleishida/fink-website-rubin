@@ -1,0 +1,35 @@
+{{ define "main" }}
+  <div class="vi-page">
+    <div class="vi-intro">
+      <h1 class="vi-title">{{ .Title | emojify }}</h1>
+      <div class="vi-intro-text">
+        {{ .Content }}
+      </div>
+    </div>
+
+    <div class="vi-sections">
+      {{ range site.Data.gallery.sections }}
+        {{ $page := site.GetPage (printf "/visual-identity/%s" .slug) }}
+        {{ $img := resources.Get .cover }}
+        {{ if and $page $img }}
+          {{ $thumb := $img.Filter (images.Process "resize 900x q80 webp") }}
+          {{ $size := .size | default 1 }}
+          <a class="vi-section-card" href="{{ $page.RelPermalink }}">
+            <span class="vi-section-frame" {{ with .background }}style="background-color: {{ . }};"{{ end }}>
+              <img
+                class="vi-section-img"
+                src="{{ $thumb.RelPermalink }}"
+                width="{{ $thumb.Width }}"
+                height="{{ $thumb.Height }}"
+                loading="lazy"
+                alt="{{ $page.Title }}"
+                style="transform: scale({{ $size }});"
+              />
+            </span>
+            <span class="vi-section-title">{{ $page.Title }}</span>
+          </a>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+{{ end }}

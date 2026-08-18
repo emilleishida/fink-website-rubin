@@ -1,0 +1,18 @@
+# Subsections for the Icons page.
+#
+# Optional. If this file doesn't exist (or is empty), the Icons page just
+# shows a single flat mosaic, same as any other section. When it does have
+# entries, the page is split into one divider + mosaic per subsection below,
+# in this order, plus a final ungrouped mosaic (no divider) for any icons.yaml
+# entry whose "subsection" field doesn't match one of these names.
+#
+# Fields:
+#   name         (required) must exactly match the "subsection" field used
+#                on entries in icons.yaml
+#   description  (optional) a short line shown under the title
+
+- name: "Science portal icons"
+  description: "Icons used throughout the Fink science portal interface."
+
+- name: "T-shirt icons"
+  description: "Icons designed for Fink merchandise and t-shirts."

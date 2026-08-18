@@ -1,0 +1,335 @@
+# Visual Identity gallery - Icons section
+#
+# Add one entry per artwork. To add a new piece:
+#   1. Drop a reasonably-sized image (a few MB is fine, it is compressed
+#      automatically) into assets/
+#   2. Add a new block below pointing "image" at that filename.
+#
+# Fields:
+#   image        (required) filename inside assets/
+#   title        (required) short title of the piece
+#   artist       (required) artist name, as they want to be credited
+#   artist_url   (optional) link to the artist's website / socials / portfolio
+#   description  (optional) a sentence or two about the piece
+#   background   (optional) CSS color shown behind the image, for pieces with
+#                a transparent background that shouldn't sit on plain white
+#                or black. Any CSS color works, e.g. "#15284f", "black",
+#                "rgb(20, 20, 40)". Leave empty to use the site's default.
+#   downloads    (optional) list of full-resolution files for this piece, one
+#                button is shown per entry, in the order given, e.g.:
+#                  downloads:
+#                    - format: PNG
+#                      url: https://drive.google.com/...
+#                    - format: Adobe
+#                      url: https://drive.google.com/...
+#                Leave empty/omit if there is nothing to link to yet.
+#   wide         (optional) set to true for landscape/horizontal images that
+#                look too small when constrained to one column's width. A
+#                wide image spans 2 columns instead of 1, so it renders at a
+#                sensible height instead of a tiny sliver. Leave unset
+#                (false) for portrait/square images.
+#   subsection   (optional) groups this item under a titled divider on the
+#                page. Must exactly match a "name" in
+#                data/gallery/icons-subsections.yaml. Leave unset to have
+#                the item show up in the ungrouped mosaic at the end.
+
+- image: minimalist_logo/SNIa.png
+  subsection: "Science portal icons"
+  title: "SNIa minimalist logo"
+  artist: "Anastasiya Voloshina"
+  artist_url: "https://www.behance.net/anastasvoloshi2"
+  description: ""
+  background: "#15284F"
+  downloads:
+    - format: PNG
+      url: "https://drive.google.com/file/d/1PZ8AYrmIpUURWZb2WNZ-YzoKLspXdmvE/view?usp=drive_link"
+    - format: Adobe
+      url: "https://drive.google.com/file/d/1b8oH5sl9YC66dL-GZ3a-RWHU96h-9x7t/view?usp=drive_link"
+
+- image: minimalist_logo/SNCC.png
+  subsection: "Science portal icons"
+  title: "SNCC minimalist logo"
+  artist: "Anastasiya Voloshina"
+  artist_url: "https://www.behance.net/anastasvoloshi2"
+  description: ""
+  background: "#15284F"
+  downloads:
+    - format: PNG
+      url: "https://drive.google.com/file/d/1iBgsQVu8wTI7jGkGiegg3hbccY5QBL4p/view?usp=drive_link"
+    - format: Adobe
+      url: "https://drive.google.com/file/d/19STuh_zfm73AbiwOKvH3VMkXe6MjM65V/view?usp=drive_link"
+
+- image: minimalist_logo/SLSN.png
+  subsection: "Science portal icons"
+  title: "SLSN minimalist logo"
+  artist: "Anastasiya Voloshina"
+  artist_url: "https://www.behance.net/anastasvoloshi2"
+  description: ""
+  background: "#15284F"
+  downloads:
+    - format: PNG
+      url: "https://drive.google.com/file/d/1CQpJvq5knnNOx5pq_gWapJO8UaacpHVc/view?usp=drive_link"
+    - format: Adobe
+      url: "https://drive.google.com/file/d/133_cVDS45YrIqZWNA9t9MDf3G-EMiU1T/view?usp=drive_link"
+
+- image: minimalist_logo/TDE.png
+  subsection: "Science portal icons"
+  title: "TDE minimalist logo"
+  artist: "Anastasiya Voloshina"
+  artist_url: "https://www.behance.net/anastasvoloshi2"
+  description: ""
+  background: "#15284F"
+  downloads:
+    - format: PNG
+      url: "https://drive.google.com/file/d/1gEgwmvhnCdWADh1U3qoIg36C5-E0syWL/view?usp=drive_link"
+    - format: Adobe
+      url: "https://drive.google.com/file/d/1Jcte2_O04J9PbS77TE-7oDiqkSfyQid3/view?usp=drive_link"
+
+- image: minimalist_logo/Asteroid.png
+  subsection: "Science portal icons"
+  title: "Asteroid minimalist logo"
+  artist: "Anastasiya Voloshina"
+  artist_url: "https://www.behance.net/anastasvoloshi2"
+  description: ""
+  background: "#15284F"
+  downloads:
+    - format: PNG
+      url: "https://drive.google.com/file/d/12OM-ZGfIm0fzuFmgnpFF0TIqsMyKVPA_/view?usp=drive_link"
+    - format: Adobe
+      url: "https://drive.google.com/file/d/1si3Xo2FmtR0zD19rii2FJ3bZ9WXQuTva/view?usp=drive_link"
+
+- image: minimalist_logo/AGN.png
+  subsection: "Science portal icons"
+  title: "AGN minimalist logo"
+  artist: "Anastasiya Voloshina"
+  artist_url: "https://www.behance.net/anastasvoloshi2"
+  description: ""
+  background: "#15284F"
+  downloads:
+    - format: PNG
+      url: "https://drive.google.com/file/d/1cJTT-ZmqqaRbhPI779SMRSx5bp7afVsb/view?usp=drive_link"
+    - format: Adobe
+      url: "https://drive.google.com/file/d/1dGyNu7OVm8tvR5thRVruKhBQPbEZlAin/view?usp=drive_link"
+
+- image: minimalist_logo/DDSN.png
+  subsection: "Science portal icons"
+  title: "DDS minimalist logo"
+  artist: "Anastasiya Voloshina"
+  artist_url: "https://www.behance.net/anastasvoloshi2"
+  description: ""
+  background: "#15284F"
+  downloads:
+    - format: PNG
+      url: "https://drive.google.com/file/d/1VX9JheYTy7ZG5IvVEHK6BFLoFVMMYNeD/view?usp=drive_link"
+    - format: Adobe
+      url: "https://drive.google.com/file/d/17gGQq1m1-YeLRUj2qvKUQ_sWcrazifaA/view?usp=drive_link"
+
+- image: minimalist_logo/YSO.png
+  subsection: "Science portal icons"
+  title: "YSO minimalist logo"
+  artist: "Anastasiya Voloshina"
+  artist_url: "https://www.behance.net/anastasvoloshi2"
+  description: ""
+  background: "#15284F"
+  downloads:
+    - format: PNG
+      url: "https://drive.google.com/file/d/1Puhn6wo8VBP_PRWQ9ndlcqzkFAb51Pm0/view?usp=drive_link"
+    - format: Adobe
+      url: "https://drive.google.com/file/d/1RZDYCc4lcybpq6rMNBh705KQirFs4I8e/view?usp=drive_link"
+
+- image: minimalist_logo/Anomaly.png
+  subsection: "Science portal icons"
+  title: "Anomaly minimalist logo"
+  artist: "Anastasiya Voloshina"
+  artist_url: "https://www.behance.net/anastasvoloshi2"
+  description: ""
+  background: "#15284F"
+  downloads:
+    - format: PNG
+      url: "https://drive.google.com/file/d/1h0L_X0NlH-Uk4j-M5q_McBVrOmc_n7iq/view?usp=drive_link"
+    - format: Adobe
+      url: "https://drive.google.com/file/d/1s_OoX6HbpdYDU_wv27fZXK6CTA09Cd0r/view?usp=drive_link"
+
+- image: minimalist_logo/EclBin.png
+  subsection: "Science portal icons"
+  title: "Eclipsing binary minimalist logo"
+  artist: "Anastasiya Voloshina"
+  artist_url: "https://www.behance.net/anastasvoloshi2"
+  description: ""
+  background: "#15284F"
+  downloads:
+    - format: PNG
+      url: "https://drive.google.com/file/d/15i7qw7COGMuNPNmm9-iWrnhmHu4MsXkn/view?usp=drive_link"
+    - format: Adobe
+      url: "https://drive.google.com/file/d/1xbQYDsCjiK23qchaSYnhDZQqFkyHQK_a/view?usp=drive_link"
+
+- image: minimalist_logo/MicroLens.png
+  subsection: "Science portal icons"
+  title: "Microlensing binary minimalist logo"
+  artist: "Anastasiya Voloshina"
+  artist_url: "https://www.behance.net/anastasvoloshi2"
+  description: ""
+  background: "#15284F"
+  downloads:
+    - format: PNG
+      url: "https://drive.google.com/file/d/1Kn42naj3wa_U_Iq94FBGj4FUtFgPP8DR/view?usp=drive_link"
+    - format: Adobe
+      url: "https://drive.google.com/file/d/1xErh0XJT6GtzWWS_yCiEJ50F1cx4dK6W/view?usp=drive_link"
+
+- image: minimalist_logo/Unknown.png
+  subsection: "Science portal icons"
+  title: "Unknown logo"
+  artist: "Anastasiya Voloshina"
+  artist_url: "https://www.behance.net/anastasvoloshi2"
+  description: ""
+  background: "#15284F"
+  downloads:
+    - format: PNG
+      url: "https://drive.google.com/file/d/1Br-de73NHQZ3bfxs8k3ostI1VBR3yW1P/view?usp=drive_link"
+    - format: Adobe
+      url: "https://drive.google.com/file/d/1EblkczSS_33XI4LPWva6uhFPR_GOOlh_/view?usp=drive_link"
+
+
+- image: t-shirt-logo/SNIa.png
+  subsection: "T-shirt icons"
+  title: "SNIa logo"
+  artist: "Anastasiya Voloshina"
+  artist_url: "https://www.behance.net/anastasvoloshi2"
+  description: ""
+  background: "#15284F"
+  downloads:
+    - format: PNG
+      url: "https://drive.google.com/file/d/11u8SGe8HNvYsXguj9ctfjB6_Af5X7POa/view?usp=drive_link"
+    - format: Adobe
+      url: "https://drive.google.com/file/d/1o-vENlO6ehsNFHE_T9Gt9BngfKbyQtrt/view?usp=drive_link"
+
+- image: t-shirt-logo/SNII.png
+  subsection: "T-shirt icons"
+  title: "SNII logo"
+  artist: "Anastasiya Voloshina"
+  artist_url: "https://www.behance.net/anastasvoloshi2"
+  description: ""
+  background: "#15284F"
+  downloads:
+    - format: PNG
+      url: "https://drive.google.com/file/d/1sajVVLEaIxBMf4u1frXv-Itxl_mchODd/view?usp=drive_link"
+    - format: Adobe
+      url: "https://drive.google.com/file/d/1oZBV1vfRr4-bJbF7Axh_nZY0a2bCJcDI/view?usp=drive_link"
+
+- image: t-shirt-logo/TDE.png
+  subsection: "T-shirt icons"
+  title: "TDE logo"
+  artist: "Anastasiya Voloshina"
+  artist_url: "https://www.behance.net/anastasvoloshi2"
+  description: ""
+  background: "#15284F"
+  downloads:
+    - format: PNG
+      url: "https://drive.google.com/file/d/1PFlI8TtuDmlX7cCs0m02T9j7nTQ4u5ML/view?usp=drive_link"
+    - format: Adobe
+      url: "https://drive.google.com/file/d/1iPriVa5tCcq7unSArMScR_J3jCpEw2qx/view?usp=drive_link"
+
+- image: t-shirt-logo/Asteroid_noTransperensy.png
+  subsection: "T-shirt icons"
+  title: "Asteroid logo"
+  artist: "Anastasiya Voloshina"
+  artist_url: "https://www.behance.net/anastasvoloshi2"
+  description: ""
+  background: "#15284F"
+  downloads:
+    - format: PNG
+      url: "https://drive.google.com/file/d/1W4IxKmrMm25dwtiNLZsCLrkyvtIZA_Yg/view?usp=drive_link"
+    - format: Adobe
+      url: "https://drive.google.com/file/d/1Ym2B5HW5lmzPhssUY9vZ5Xw8-tBRMgC7/view?usp=drive_link"
+
+- image: t-shirt-logo/AGN_noTransperensy.png
+  subsection: "T-shirt icons"
+  title: "AGN logo"
+  artist: "Anastasiya Voloshina"
+  artist_url: "https://www.behance.net/anastasvoloshi2"
+  description: ""
+  background: "#15284F"
+  downloads:
+    - format: PNG
+      url: "https://drive.google.com/file/d/1YPGrqauLtK3Hzm7SUiZTloF2OYmdvWy7/view?usp=drive_link"
+    - format: Adobe
+      url: "https://drive.google.com/file/d/13NnFaBteGBGD1ZMH6Q543SfVP6E-O-Yw/view?usp=drive_link"
+
+- image: t-shirt-logo/DDS_explosion.png
+  subsection: "T-shirt icons"
+  title: "DDS logo"
+  artist: "Anastasiya Voloshina"
+  artist_url: "https://www.behance.net/anastasvoloshi2"
+  description: ""
+  background: "#15284F"
+  downloads:
+    - format: PNG
+      url: "https://drive.google.com/file/d/1cVEghMwZ5UZ0LKdE2QJiFjnMZU5prqsl/view?usp=drive_link"
+    - format: Adobe
+      url: "https://drive.google.com/file/d/1_68VkeTYVO-x7UBoMlhs98EDuMxIBJA6/view?usp=drive_link"
+
+- image: t-shirt-logo/YSO.png
+  subsection: "T-shirt icons"
+  title: "YSO logo"
+  artist: "Anastasiya Voloshina"
+  artist_url: "https://www.behance.net/anastasvoloshi2"
+  description: ""
+  background: "#15284F"
+  downloads:
+    - format: PNG
+      url: "https://drive.google.com/file/d/1Fe9sRx9_0dhUic78KDqtgyMahuF2ng3S/view?usp=drive_link"
+    - format: Adobe
+      url: "https://drive.google.com/file/d/1tqDSZWSBIeb1e8SgKATH_dOaZSgYNhFb/view?usp=drive_link"
+
+- image: t-shirt-logo/Anomaly.png
+  subsection: "T-shirt icons"
+  title: "Anomaly logo"
+  artist: "Anastasiya Voloshina"
+  artist_url: "https://www.behance.net/anastasvoloshi2"
+  description: ""
+  background: "#15284F"
+  downloads:
+    - format: PNG
+      url: "https://drive.google.com/file/d/13KlHSHh8-UEZVeOXOs5Dr99-od6yimce/view?usp=drive_link"
+    - format: Adobe
+      url: "https://drive.google.com/file/d/1DSjLqO-G9Owa46o1nWX0dPJeyFVuQV50/view?usp=drive_link"
+
+- image: t-shirt-logo/Eclipsing.png
+  subsection: "T-shirt icons"
+  title: "Eclipsing logo"
+  artist: "Anastasiya Voloshina"
+  artist_url: "https://www.behance.net/anastasvoloshi2"
+  description: ""
+  background: "#15284F"
+  downloads:
+    - format: PNG
+      url: "https://drive.google.com/file/d/1cJviC6uvZcuHdDnwstEQTIUrJt4HHNiH/view?usp=drive_link"
+    - format: Adobe
+      url: "https://drive.google.com/file/d/1ak8vw9hDsq2RJM8wAG9WTyQjdyW4ASOm/view?usp=drive_link"
+
+- image: t-shirt-logo/Microlensing.png
+  subsection: "T-shirt icons"
+  title: "Microlensing logo"
+  artist: "Anastasiya Voloshina"
+  artist_url: "https://www.behance.net/anastasvoloshi2"
+  description: ""
+  background: "#15284F"
+  downloads:
+    - format: PNG
+      url: "https://drive.google.com/file/d/15ouho__i885XkwnBvC3jGR7VuzaJPNax/view?usp=drive_link"
+    - format: Adobe
+      url: "https://drive.google.com/file/d/1F0tQQBhjHnSHqS21AScpbSnEWeGkAPTV/view?usp=drive_link"
+
+- image: t-shirt-logo/Menu.png
+  subsection: "T-shirt icons"
+  title: "Search bar logo"
+  artist: "Anastasiya Voloshina"
+  artist_url: "https://www.behance.net/anastasvoloshi2"
+  description: ""
+  background: "#15284F"
+  downloads:
+    - format: PNG
+      url: "https://drive.google.com/file/d/1Jvru7ks8z8MrCNf0sgZEl-iqiJD0Dh2U/view?usp=drive_link"
+    - format: Adobe
+      url: "https://drive.google.com/file/d/1B7OwOgVThGLEvRl8URcnqoHou-MyffAw/view?usp=drive_link"
+
