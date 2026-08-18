@@ -47,16 +47,22 @@
     - format: Adobe
       url: "https://drive.google.com/file/d/1djdbHEXaYkFbaa0m2Kq4PeFyO72e4Lp8/view?usp=drive_link"
 
-- image: T-shirt.png
+- image: fink_tshirt.png
   title: "Fink t-shirts"
   artist: "Anastasiya Voloshina"
   artist_url: "https://www.behance.net/anastasvoloshi2"
   description: ""
-  wide: true
+  background: "#FFFFFF"
+
+- image: fink_bottle.png
+  title: "Fink bottle v1"
+  artist: "Justin Burks"
+  artist_url: "https://www.justinburksdesign.com/"
+  description: ""
   background: "#FFFFFF"
 
 - image: fink_bottles.png
-  title: "Fink bottle"
+  title: "Fink bottle v2"
   artist: "Justin Burks"
   artist_url: "https://www.justinburksdesign.com/"
   description: ""
