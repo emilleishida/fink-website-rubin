@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-    modalDesc.textContent = item.dataset.description || "";
+    modalDesc.innerHTML = item.dataset.description || "";
 
     modalDownloads.innerHTML = "";
     var downloads = [];
